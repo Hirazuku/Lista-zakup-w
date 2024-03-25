@@ -38,6 +38,11 @@
         render();
     }
 
+    const doneTask = (index) => {
+        tasks[index].done = !tasks[index].done;
+        render();
+    }
+
     const render = () => {
         let htmlString = "";
 
@@ -47,6 +52,7 @@
             ${task.done ? "style=\"text-decoration: line-through\"" : ""}>
             ${task.content}
             <button class="js-remove">usuń</button>
+            <button class="js-done">kupione</button>
             </li>
             `;
         }
@@ -58,6 +64,14 @@
         removeButtons.forEach((removeButton, index) => {
             removeButton.addEventListener("click", () => {
                 removeTask(index);
+            });
+        });
+
+        const doneButtons = document.querySelectorAll(".js-done");
+
+        doneButtons.forEach((doneButton, index) => {
+            doneButton.addEventListener("click", () => {
+                doneTask(index);
             });
         });
     }
