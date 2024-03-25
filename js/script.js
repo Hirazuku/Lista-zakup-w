@@ -43,22 +43,7 @@
         render();
     }
 
-    const render = () => {
-        let htmlString = "";
-
-        for (const task of tasks) {
-            htmlString += `
-            <li
-            ${task.done ? "style=\"text-decoration: line-through\"" : ""}>
-            ${task.content}
-            <button class="js-remove">usuń</button>
-            <button class="js-done">kupione</button>
-            </li>
-            `;
-        }
-
-        document.querySelector(".js-tasks").innerHTML = htmlString;
-
+    const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
         removeButtons.forEach((removeButton, index) => {
@@ -76,6 +61,25 @@
         });
     }
 
+    const render = () => {
+        let htmlString = "";
+
+        for (const task of tasks) {
+            htmlString += `
+            <li
+            ${task.done ? "style=\"text-decoration: line-through\"" : ""}>
+            ${task.content}
+            <button class="js-remove">usuń</button>
+            <button class="js-done">kupione</button>
+            </li>
+            `;
+        }
+
+        document.querySelector(".js-tasks").innerHTML = htmlString;
+
+        bindEvents();
+    }
+
     const onFormSubmit = (event) => {
         event.preventDefault();
 
@@ -84,7 +88,7 @@
         if (newTaskContent === "") {
             return;
         }
-
+        
         addNewTask(newTaskContent);
     }
 
@@ -93,7 +97,6 @@
 
         const form = document.querySelector(".js-form");
         form.addEventListener("submit", onFormSubmit);
-
     }
 
     init();
