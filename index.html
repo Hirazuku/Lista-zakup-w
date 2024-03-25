@@ -24,27 +24,17 @@
 
 <body class="container">
     <header class="header">
-        <h1>mgr inż. arch.</h1>
-        <h2>Michał Kowalczyk</h2>
+        <h1>Lista zakupów</h1>
     </header>
     <main>
-        <form class="js-currency">
-            <legend id="formularz" class="form__legend">Policz cenę:</legend>
-            <p>
-                <label>
-                    <span class="form__labelText">Podaj kwotę euro do przeliczenia: </span>
-                    <input class="form__field js-A" type="number" name="amount" value="900">
-                </label>
-            </p>
-            <p>
-                <label>
-                    <span class="form__labelText">Podaj aktualny kurs walut: </span>
-                    <input class="form__field js-eR" type="real" name="eR" value="4.43">
-                </label>
-            </p>
-            <button type="submit">Przelicz</button>
-            <p>Kwota wynosi: <strong class="js-finalValue"></strong> PLN</p>
+        <div>Warzywa</div>
+        <form class="js-form">
+            <input class="js-newTask">
+            <button>Dodaj do listy</button>
         </form>
+        <ul class="js-tasks list">
+
+        </ul>
     </main>
     <footer id="kontakt"><strong>Kontakt</strong>
         <p>Nr telefonu: 889 278 522
