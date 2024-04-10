@@ -42,6 +42,10 @@ html {
     justify-content: flex-start;
 }
 
+.button__done {
+    background-color: green;
+}
+
 .button__remove {
     justify-self: flex-end;
 }
