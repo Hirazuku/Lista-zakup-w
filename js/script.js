@@ -1,29 +1,5 @@
 {
     const tasks = [
-        {
-            content: "Warzywa i owoce",
-            done: false,
-        },
-        {
-            content: "Nabiał",
-            done: false,
-        },
-        {
-            content: "Przyprawy",
-            done: false,
-        },
-        {
-            content: "Mięso",
-            done: false,
-        },
-        {
-            content: "Zboże",
-            done: false,
-        },
-        {
-            content: "Desery",
-            done: false,
-        },
     ];
 
     const addNewTask = (newTaskContent) => {
@@ -66,11 +42,11 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li
+            <li class="list__item list__item--row"
             ${task.done ? "style=\"text-decoration: line-through\"" : ""}>
+            <button class="js-done button__done">kupione</button>
             ${task.content}
-            <button class="js-remove">usuń</button>
-            <button class="js-done">kupione</button>
+            <button class="js-remove button__remove">usuń</button>
             </li>
             `;
         }
