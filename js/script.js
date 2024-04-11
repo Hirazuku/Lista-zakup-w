@@ -44,9 +44,9 @@
             htmlString += `
             <li class="list__item list__item--row"
             ${task.done ? "style=\"text-decoration: line-through\"" : ""}>
-            <input class="js-done button__done" type="checkbox">kupione</button>
+            <input class="js-done button__done" type="checkbox"></button>
             ${task.content}
-            <button class="js-remove button__remove">usuń</button>
+            <button class="js-remove button__remove"></button>
             </li>
             `;
         }
