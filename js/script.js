@@ -6,6 +6,8 @@
         tasks.push({
             content: newTaskContent,
         });
+        const field = document.querySelector(".js-newTask");
+        field.value = "";
         render();
     }
 
