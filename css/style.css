@@ -51,6 +51,10 @@ html {
     width: 50px;
 }
 
+.done {
+    background-image: url("https://i.postimg.cc/Pq3H0494/Kosz.png");
+}
+
 .button__remove {
     background-image: url("https://i.postimg.cc/Pq3H0494/Kosz.png");
     background-size: cover ;
