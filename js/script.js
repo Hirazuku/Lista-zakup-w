@@ -17,8 +17,6 @@
     }
 
     const doneTask = (index) => {
-        const checked = document.querySelector("js-done");
-        checked.value = checked;
         tasks[index].done = !tasks[index].done;
         render();
     }
@@ -46,9 +44,12 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li class="list__item list__item--row"
-            ${task.done ? "style=\"text-decoration: line-through\"" : ""}>
-            <input class="js-done button__done" type="checkbox">
+            <li 
+            class="list__item list__item--row ${task.done ? "list__item--done" : ""}"
+            >
+            <button 
+            class="js-done ${task.done ? "button__done" : ""}"></button
+            >
             ${task.content}
             <button class="js-remove button__remove"></button>
             </li>
@@ -68,7 +69,7 @@
         if (newTaskContent === "") {
             return;
         }
-        
+
         addNewTask(newTaskContent);
     }
 
