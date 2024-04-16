@@ -10,8 +10,8 @@ html {
 
 
 .container {
-    margin: 0 15%;
-    max-width: 1600px;
+    margin: 0 auto;
+    max-width: 900px;
     color: #000000;
     background-color: rgb(228, 209, 173);
     font: 25px/2 'Oswald', sans-serif;
@@ -54,10 +54,6 @@ html {
     background-image: url("https://i.postimg.cc/vBkKwRhf/checked.png");
     background-size: contain;
     width: 50px;
-}
-
-.done {
-    background-image: url("https://i.postimg.cc/Pq3H0494/Kosz.png");
 }
 
 .button__remove {
