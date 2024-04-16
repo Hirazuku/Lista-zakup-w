@@ -3,27 +3,11 @@
     ];
 
     const addNewTask = (newTaskContent) => {
-        if (newTaskContent === "Rosół") {
-            tasks.push({
-                content: "Włoszczyzna",
-            });
-            tasks.push({
-                content: "3 udka z kurczaka",
-            });
-        }
-        if (newTaskContent === "Schabowy") {
-            tasks.push({
-                content: "6 kawałków schabu",
-            });
-            tasks.push({
-                content: "Ziemniaki",
-            });
-        }
-        else {
-            tasks.push({
-                content: newTaskContent,
-            });
-        }
+
+        tasks.push({
+            content: newTaskContent,
+        });
+
         const field = document.querySelector(".js-newTask");
         field.value = "";
         render();
@@ -36,6 +20,179 @@
 
     const doneTask = (index) => {
         tasks[index].done = !tasks[index].done;
+        render();
+    }
+
+    const addRosol = () => {
+        tasks.push({
+            content: "Włoszczyzna",
+        });
+        tasks.push({
+            content: "3 udka z kurczaka",
+        });
+        render();
+    }
+
+    const addSchab = () => {
+        tasks.push({
+            content: "Ziemniaki",
+        });
+        tasks.push({
+            content: "5 kawałków mięsa schabowego",
+        });
+        render();
+    }
+
+    const addFilet = () => {
+        tasks.push({
+            content: "Ziemniaki",
+        });
+        tasks.push({
+            content: "Filet z kurczaka",
+        });
+        render();
+    }
+
+    const addCurry = () => {
+        tasks.push({
+            content: "Ziemniaki",
+        });
+        tasks.push({
+            content: "Czosnek",
+        });
+        tasks.push({
+            content: "Marchew",
+        });
+        tasks.push({
+            content: "Cebula",
+        });
+        tasks.push({
+            content: "Pierś z kurczaka",
+        });
+        tasks.push({
+            content: "Sos sojowy",
+        });
+        tasks.push({
+            content: "Sok jabłkowy",
+        });
+        tasks.push({
+            content: "Ocet jabłkowy",
+        });
+        tasks.push({
+            content: "Masło",
+        });
+        tasks.push({
+            content: "Miód",
+        });
+        tasks.push({
+            content: "Bulion",
+        });
+        render();
+    }
+
+    const addDramstiki = () => {
+        tasks.push({
+            content: "Ziemniaki",
+        });
+        tasks.push({
+            content: "Papryka",
+        });
+        tasks.push({
+            content: "Cebula",
+        });
+        tasks.push({
+            content: "Pomysł na",
+        });
+        tasks.push({
+            content: "4 dramstiki",
+        });
+        render();
+    }
+
+    const addRyba = () => {
+        tasks.push({
+            content: "Ziemniaki",
+        });
+        tasks.push({
+            content: "Ryba",
+        });
+        render();
+    }
+
+    const addKalafior = () => {
+        tasks.push({
+            content: "Kalafior",
+        });
+        tasks.push({
+            content: "Cebula",
+        });
+        tasks.push({
+            content: "Marchew",
+        });
+        tasks.push({
+            content: "Tofu",
+        });
+        tasks.push({
+            content: "Buraczki",
+        });
+        render();
+    }
+
+    const addOgorkowa = () => {
+        tasks.push({
+            content: "Przecier z ogórków",
+        });
+        tasks.push({
+            content: "Śmietana 18%",
+        });
+        render();
+    }
+
+    const addNalesnikiTwarog = () => {
+        tasks.push({
+            content: "Twaróg półtłusty 500g",
+        });
+        tasks.push({
+            content: "Śmietana 18% 30g",
+        });
+        render();
+    }
+
+    const addSzpinak = () => {
+        tasks.push({
+            content: "Szpinak mrożony 500g",
+        });
+        tasks.push({
+            content: "Cebula",
+        });
+        tasks.push({
+            content: "Czosnek",
+        });
+        tasks.push({
+            content: "Orzechy włoskie",
+        });
+        tasks.push({
+            content: "Ser żółty lub feta",
+        });
+        render();
+    }
+
+    const addTagiatelle = () => {
+        tasks.push({
+            content: "Filet z kurczaka",
+        });
+        tasks.push({
+            content: "Śmietanka 30% 200ml",
+        });
+        tasks.push({
+            content: "Cebula",
+        });
+        tasks.push({
+            content: "Czosnek",
+        });
+        tasks.push({
+            content: "Ser do starcia 100g",
+        });
         render();
     }
 
@@ -93,9 +250,30 @@
 
     const init = () => {
         render();
-
         const form = document.querySelector(".js-form");
         form.addEventListener("submit", onFormSubmit);
+        const rosol = document.querySelector(".js-rosol");
+        rosol.addEventListener("click", addRosol);
+        const schab = document.querySelector(".js-schab");
+        schab.addEventListener("click", addSchab);
+        const filet = document.querySelector(".js-filet");
+        filet.addEventListener("click", addFilet);
+        const curry = document.querySelector(".js-curry");
+        curry.addEventListener("click", addCurry);
+        const dramstiki = document.querySelector(".js-dramstiki");
+        dramstiki.addEventListener("click", addDramstiki);
+        const ryba = document.querySelector(".js-ryba");
+        ryba.addEventListener("click", addRyba);
+        const kalafior = document.querySelector(".js-kalafior");
+        kalafior.addEventListener("click", addKalafior);
+        const ogorkowa = document.querySelector(".js-ogorkowa");
+        ogorkowa.addEventListener("click", addOgorkowa);
+        const nalesnikiTwarog = document.querySelector(".js-nalesnikiTwarog");
+        nalesnikiTwarog.addEventListener("click", addNalesnikiTwarog);
+        const szpinak = document.querySelector(".js-szpinak");
+        szpinak.addEventListener("click", addSzpinak);
+        const tagiatelle = document.querySelector(".js-tagiatelle");
+        tagiatelle.addEventListener("click", addTagiatelle);
     }
 
     init();
