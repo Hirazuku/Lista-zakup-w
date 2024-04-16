@@ -1,18 +1,29 @@
 {
     const tasks = [
-        {
-            content: "Papryka",
-        },
-        {
-            content: "Cebula",
-            done: true,
-        }
     ];
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
+        if (newTaskContent === "Rosół") {
+            tasks.push({
+                content: "Włoszczyzna",
+            });
+            tasks.push({
+                content: "3 udka z kurczaka",
+            });
+        }
+        if (newTaskContent === "Schabowy") {
+            tasks.push({
+                content: "6 kawałków schabu",
+            });
+            tasks.push({
+                content: "Ziemniaki",
+            });
+        }
+        else {
+            tasks.push({
+                content: newTaskContent,
+            });
+        }
         const field = document.querySelector(".js-newTask");
         field.value = "";
         render();
