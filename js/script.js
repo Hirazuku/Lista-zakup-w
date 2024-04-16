@@ -1,5 +1,12 @@
 {
     const tasks = [
+        {
+            content: "Papryka",
+        },
+        {
+            content: "Cebula",
+            done: true,
+        }
     ];
 
     const addNewTask = (newTaskContent) => {
