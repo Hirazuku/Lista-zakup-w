@@ -27,6 +27,10 @@
 }
 
 @media (max-width: 500px) {
+    .container {
+        margin: 10px;
+    }
+
     .form__field {
         width: 100%;
         max-width: 100%;
