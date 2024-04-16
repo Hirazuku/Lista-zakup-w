@@ -54,11 +54,11 @@
             <li 
             class="list__item list__item--row ${task.done ? "list__item--done" : ""}"
             >
-            <button 
-            class="js-done ${task.done ? "button__done" : ""}"></button
-            >
-            ${task.content}
-            <button class="js-remove button__remove"></button>
+              <button 
+                class="js-done ${task.done ? "button__done" : ""}"></button
+              >
+               ${task.content}
+              <button class="js-remove button__remove"></button>
             </li>
             `;
         }
