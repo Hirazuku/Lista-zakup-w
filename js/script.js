@@ -2,6 +2,8 @@
     const tasks = [
     ];
 
+
+
     const addNewTask = (newTaskContent) => {
 
         tasks.push({
@@ -311,8 +313,12 @@
             </li>
             `;
         }
- 
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+        if (htmlString.includes("Cebula")) {
+            document.querySelector(".js-tasks").innerHTML = htmlString;
+        }
+        else {
+            document.querySelector(".js-tasks2").innerHTML = htmlString;
+        }
 
         bindEvents();
     }
