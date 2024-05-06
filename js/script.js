@@ -38,7 +38,33 @@
             content: "Ziemniaki",
         });
         tasks.push({
-            content: "5 kawałków mięsa schabowego",
+            content: "6 kawałków mięsa schabowego",
+        });
+        render();
+    }
+
+    const addSchabDuszony = () => {
+        tasks.push({
+            content: "Ziemniaki",
+        });
+        tasks.push({
+            content: "6 kawałków mięsa schabowego",
+        });
+        render();
+        tasks.push({
+            content: "Cebula",
+        });
+        render();
+        tasks.push({
+            content: "Papryka",
+        });
+        render();
+        tasks.push({
+            content: "Fasolka szparagowa",
+        });
+        render();
+        tasks.push({
+            content: "Śmietana 30% lub 18%",
         });
         render();
     }
@@ -197,6 +223,60 @@
         render();
     }
 
+    const addCarbonara = () => {
+        tasks.push({
+            content: "Boczek",
+        });
+        tasks.push({
+            content: "Śmietana 18% 100ml",
+        });
+        tasks.push({
+            content: "Ser do starcia 100g",
+        });
+        tasks.push({
+            content: "Makaron spaghetti",
+        });
+
+        render();
+    }
+
+    const addKrokiety = () => {
+        tasks.push({
+            content: "400g pieczarek",
+        });
+        tasks.push({
+            content: "500g kapusty kiszonej",
+        });
+        tasks.push({
+            content: "Marchewka",
+        });
+        tasks.push({
+            content: "Cebula",
+        });
+
+        render();
+    }
+
+    const addBigos = () => {
+        tasks.push({
+            content: "500g kapusty kiszonej",
+        });
+        tasks.push({
+            content: "Cebula",
+        });
+        tasks.push({
+            content: "30g grzybów",
+        });
+        tasks.push({
+            content: "Boczek 100g",
+        });
+        tasks.push({
+            content: "Kiełbasa 100g",
+        });
+
+        render();
+    }
+
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
@@ -231,7 +311,7 @@
             </li>
             `;
         }
-
+ 
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
         bindEvents();
@@ -257,6 +337,8 @@
         rosol.addEventListener("click", addRosol);
         const schab = document.querySelector(".js-schab");
         schab.addEventListener("click", addSchab);
+        const schabDuszony = document.querySelector(".js-schabDuszony");
+        schabDuszony.addEventListener("click", addSchabDuszony);
         const filet = document.querySelector(".js-filet");
         filet.addEventListener("click", addFilet);
         const curry = document.querySelector(".js-curry");
@@ -275,6 +357,12 @@
         szpinak.addEventListener("click", addSzpinak);
         const tagiatelle = document.querySelector(".js-tagiatelle");
         tagiatelle.addEventListener("click", addTagiatelle);
+        const carbonara = document.querySelector(".js-carbonara");
+        carbonara.addEventListener("click", addCarbonara);
+        const krokiety = document.querySelector(".js-krokietKapusta");
+        krokiety.addEventListener("click", addKrokiety);
+        const bigos = document.querySelector(".js-bigos");
+        bigos.addEventListener("click", addBigos);
     }
 
     init();
