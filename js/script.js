@@ -267,7 +267,10 @@
             content: "Cebula",
         });
         tasks.push({
-            content: "30g grzybów",
+            content: "Koncentrat pomidorowy",
+        });
+        tasks.push({
+            content: "Schab 100g",
         });
         tasks.push({
             content: "Boczek 100g",
