@@ -83,9 +83,6 @@
 
     const addGulasz = () => {
         tasks.push({
-            content: "1kg łopatki wieprzowej",
-        });
-        tasks.push({
             content: "2x Papryka",
         });
         tasks.push({
@@ -93,6 +90,9 @@
         });
         tasks.push({
             content: "2x Cebula",
+        });
+        tasks.push({
+            content: "1kg łopatki wieprzowej",
         });
         render();
     }
@@ -109,6 +109,9 @@
         });
         tasks.push({
             content: "Cebula",
+        });
+        tasks.push({
+            content: "400g karkówki",
         });
         render();
     }
@@ -296,6 +299,24 @@
         });
         tasks.push({
             content: "Cebula",
+        });
+
+        render();
+    }
+
+    const addBigos = () => {
+        tasks.push({
+            content: " 500g kapusty kiszonej",
+        });
+
+        tasks.push({
+            content: "Cebula",
+        });
+        tasks.push({
+            content: "Przecier pomidorowy",
+        });
+        tasks.push({
+            content: "Mięso - kiełbasa, boczek, schab",
         });
 
         render();
