@@ -357,6 +357,7 @@
             </li>
             `;
         }
+        document.querySelector(".js-tasks").innerHTML = htmlString;
 
         bindEvents();
     }
