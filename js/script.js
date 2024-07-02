@@ -35,6 +35,16 @@
         render();
     }
 
+    const addOgorkowa = () => {
+        tasks.push({
+            content: "Przecier z ogórków",
+        });
+        tasks.push({
+            content: "Śmietana 18%",
+        });
+        render();
+    }
+
     const addSchab = () => {
         tasks.push({
             content: "Ziemniaki",
@@ -67,6 +77,38 @@
         render();
         tasks.push({
             content: "Śmietana 30% lub 18%",
+        });
+        render();
+    }
+
+    const addGulasz = () => {
+        tasks.push({
+            content: "1kg łopatki wieprzowej",
+        });
+        tasks.push({
+            content: "2x Papryka",
+        });
+        tasks.push({
+            content: "2x Marchew",
+        });
+        tasks.push({
+            content: "2x Cebula",
+        });
+        render();
+    }
+
+    const addKarkowkaPomysl = () => {
+        tasks.push({
+            content: "Pomysł na karkówkę",
+        });
+        tasks.push({
+            content: "Papryka",
+        });
+        tasks.push({
+            content: "Marchew",
+        });
+        tasks.push({
+            content: "Cebula",
         });
         render();
     }
@@ -166,22 +208,22 @@
         render();
     }
 
-    const addOgorkowa = () => {
-        tasks.push({
-            content: "Przecier z ogórków",
-        });
-        tasks.push({
-            content: "Śmietana 18%",
-        });
-        render();
-    }
-
     const addNalesnikiTwarog = () => {
         tasks.push({
             content: "Twaróg półtłusty 500g",
         });
         tasks.push({
             content: "Śmietana 18% 30g",
+        });
+        render();
+    }
+
+    const addRacuchy = () => {
+        tasks.push({
+            content: "2x Jabłko",
+        });
+        tasks.push({
+            content: "Cukier waniliowy",
         });
         render();
     }
@@ -259,28 +301,6 @@
         render();
     }
 
-    const addBigos = () => {
-        tasks.push({
-            content: "500g kapusty kiszonej",
-        });
-        tasks.push({
-            content: "Cebula",
-        });
-        tasks.push({
-            content: "Koncentrat pomidorowy",
-        });
-        tasks.push({
-            content: "Schab 100g",
-        });
-        tasks.push({
-            content: "Boczek 100g",
-        });
-        tasks.push({
-            content: "Kiełbasa 100g",
-        });
-
-        render();
-    }
 
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
@@ -344,10 +364,16 @@
         form.addEventListener("submit", onFormSubmit);
         const rosol = document.querySelector(".js-rosol");
         rosol.addEventListener("click", addRosol);
+        const ogorkowa = document.querySelector(".js-ogorkowa");
+        ogorkowa.addEventListener("click", addOgorkowa);
         const schab = document.querySelector(".js-schab");
         schab.addEventListener("click", addSchab);
         const schabDuszony = document.querySelector(".js-schabDuszony");
         schabDuszony.addEventListener("click", addSchabDuszony);
+        const gulasz = document.querySelector(".js-gulasz");
+        gulasz.addEventListener("click", addGulasz);
+        const karkowkaPomysl = document.querySelector(".js-karkowkaPomysl");
+        karkowkaPomysl.addEventListener("click", addKarkowkaPomysl);
         const filet = document.querySelector(".js-filet");
         filet.addEventListener("click", addFilet);
         const curry = document.querySelector(".js-curry");
@@ -358,10 +384,10 @@
         ryba.addEventListener("click", addRyba);
         const kalafior = document.querySelector(".js-kalafior");
         kalafior.addEventListener("click", addKalafior);
-        const ogorkowa = document.querySelector(".js-ogorkowa");
-        ogorkowa.addEventListener("click", addOgorkowa);
         const nalesnikiTwarog = document.querySelector(".js-nalesnikiTwarog");
         nalesnikiTwarog.addEventListener("click", addNalesnikiTwarog);
+        const racuchy = document.querySelector(".js-racuchy");
+        racuchy.addEventListener("click", addRacuchy);
         const szpinak = document.querySelector(".js-szpinak");
         szpinak.addEventListener("click", addSzpinak);
         const tagiatelle = document.querySelector(".js-tagiatelle");
